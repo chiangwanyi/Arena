@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena</title>
+    <script src="../dist/bundle.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(255, 239, 219);
+        }
+
+        #container {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        const container = new Arena2D("container", 800, 600);
+
+        // let t1 = new TextArea("t1", "Hello, Arena", Type.TextAreaType.PLAIN);
+        // container.add(t1);
+
+        container.bind();
+
+        console.log(container);
+    </script>
+</body>
+
+</html>
