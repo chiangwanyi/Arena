@@ -1,11 +1,12 @@
-import Arena2d from "./model/arena/arena2d"
-import { TextAreaType } from "./model/common/type"
-import LineText from "./model/text/lineText"
+import Arena2d from "./arena/Arena2d";
+import PlainText from "./component/entity/simple/text/PlainText";
+import CircleShape from "./component/shape/curved/CircleShape";
 
-let win:any = window
+if (document === undefined) {
+    throw new Error("请在浏览器环境下运行");
+}
 
-win['Arena2D'] = Arena2d
-// win["LineText"] = LineText
+(<any>window)['Arena2d'] = Arena2d;
 
-// win["Type"] = {}
-// win["Type"]["TextAreaType"] = TextAreaType
+(<any>window)['PlainText'] = PlainText;
+(<any>window)['Circle'] = CircleShape;

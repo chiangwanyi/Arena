@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arena</title>
+    <!--    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.js"></script>-->
     <script src="../dist/bundle.js"></script>
     <style>
         body {
@@ -20,17 +21,15 @@
 </head>
 
 <body>
-    <div id="container"></div>
-    <script>
-        const container = new Arena2D("container", 800, 600);
+<div id="container"></div>
+<script>
+    const container = new window.Arena2D("container", 800, 600);
 
-        // let t1 = new TextArea("t1", "Hello, Arena", Type.TextAreaType.PLAIN);
-        // container.add(t1);
+    container.push(new window.TextArea.PlainText("Hello, Arena", 800 / 2, 18 / 2, 18));
 
-        container.bind();
-
-        console.log(container);
-    </script>
+    container.bind();
+    container.show();
+</script>
 </body>
 
 </html>

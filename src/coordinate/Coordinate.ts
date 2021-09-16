@@ -1,4 +1,4 @@
-import Pair from "../common/pair";
+import Pair from "../common/Pair";
 
 class Coordinate {
     /** 坐标（横坐标，纵坐标） */
@@ -13,11 +13,11 @@ class Coordinate {
     }
 
     x(): number {
-        return this.position.getA();
+        return this.position.first();
     }
 
     y(): number {
-        return this.position.getB();
+        return this.position.second();
     }
 }
 

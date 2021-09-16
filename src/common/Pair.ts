@@ -9,11 +9,11 @@ class Pair<M, N> {
         this.b = b;
     }
 
-    getA(): M {
+    first(): M {
         return this.a;
     }
 
-    getB(): N {
+    second(): N {
         return this.b;
     }
 }
