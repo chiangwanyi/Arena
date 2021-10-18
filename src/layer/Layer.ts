@@ -11,7 +11,6 @@ class Layer {
         this._components = []
     }
 
-
     get id(): number {
         return this._id;
     }

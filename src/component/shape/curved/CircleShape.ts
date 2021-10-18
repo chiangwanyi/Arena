@@ -1,20 +1,26 @@
 import Component from "../../Component";
 import Coordinate from "../../../coordinate/Coordinate";
 
-class CircleShape extends Component {
+/**
+ * 圆形
+ */
+abstract class CircleShape extends Component {
+    /** 圆心坐标 */
     private _pos: Coordinate;
+    /** 半径 */
     private _radius: number;
-
+    /** 填充颜色 */
     private _fillColor: string = "transparent";
+    /** 边框颜色 */
     private _borderColor: string = "#000000";
-    private _borderSize : number = 1;
+    /** 边框尺寸 */
+    private _borderSize: number = 1;
 
-    constructor(cx: number, cy:number, radius: number) {
+    constructor(cx: number, cy: number, radius: number) {
         super();
         this._pos = Coordinate.build(cx, cy);
         this._radius = radius;
     }
-
 
     get pos(): Coordinate {
         return this._pos;

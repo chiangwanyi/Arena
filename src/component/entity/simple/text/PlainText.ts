@@ -1,14 +1,23 @@
 import Component from "../../../Component";
 import Coordinate from "../../../../coordinate/Coordinate";
 
+/**
+ * 普通单行文本
+ */
 class PlainText extends Component {
+    /** 文本内容 */
     private _content: string;
+    /** 中心坐标 */
     private _pos: Coordinate;
-
+    /** 文本字体大小 */
     private _fontSize: number = 16;
+    /** 文本字体类型 */
     private _fontFamily: string = "Consolas,serif";
+    /** 文本对齐方式 */
     private _textAnchor: string = "middle";
+    /** 文本基线对齐方式 */
     private _dominantBaseline: string = "central";
+    /** 文本颜色 */
     private _fontColor: string = "#000000";
 
     constructor(content: string, cx: number, cy: number, size ?: number) {
